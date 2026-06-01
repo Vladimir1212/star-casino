@@ -1,18 +1,25 @@
 # Star Casino Landing
 
-Responsive landing page based on Figma design.
+Адаптивная верстка лендинга по Figma-макету: hotel/casino affiliate landing.
 
-## Stack
+## Стек
 - HTML5
 - CSS3
 - JavaScript
-
-## Features
 - Responsive layout
-- Hero section
-- Cards grid
-- Contact form
-- Modern casino/hotel UI
 
-## Live Demo
-GitHub Pages link
+## Что есть
+- Hero section
+- Header/navigation
+- About section
+- Room cards
+- Benefits block
+- Casino games cards
+- Contact form
+- Footer
+
+## Запуск
+Открыть `index.html` в браузере.
+
+## Примечание
+Картинки подключены через внешние URL. Для продакшена лучше экспортировать изображения из Figma в папку `assets/` и заменить ссылки в HTML/CSS.

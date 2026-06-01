@@ -1,0 +1,491 @@
+:root{
+    --dark:#161616;
+    --text:#202124;
+    --muted:#555;
+    --bg:#eeeeee;
+    --yellow:#ffea25;
+    --purple:#982cff;
+    --radius:24px;
+    --container:1360px
+}
+*{
+    box-sizing:border-box
+}
+html{
+    scroll-behavior:smooth
+}
+body{
+    margin:0;
+    font-family:Inter,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    font-size:18px;
+    line-height:1.65
+}
+img{
+    max-width:100%;
+    display:block;
+    object-fit:cover
+}
+a{
+    text-decoration:none;
+    color:inherit
+}
+.container{
+    width:min(var(--container),calc(100% - 48px));
+    margin:0 auto
+}
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:20;
+    background:rgba(0,0,0,.72);
+    backdrop-filter:blur(14px)
+}
+.header__inner{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:900;
+    font-size:38px;
+    line-height:1;
+    color:var(--yellow)
+}
+.logo__icon{
+    font-size:32px
+}
+.nav{
+    display:flex;
+    gap:42px;
+    color:white;
+    font-size:16px
+}
+.nav a{
+    opacity:.92;
+    transition:.25s
+}
+.nav a:hover{
+    color:var(--yellow)
+}
+.burger{
+    display:none;
+    background:none;
+    border:0;
+    width:42px;
+    height:42px
+}
+.burger span{
+    display:block;
+    height:3px;
+    background:white;
+    margin:7px;
+    border-radius:3px
+}
+.hero{
+    min-height:860px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.1)),url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=2200&q=80') center/cover no-repeat;
+    color:white
+}
+.hero__overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.55))
+}
+.hero__content{
+    position:relative;
+    padding-top:80px
+}
+.hero h1{
+    font-size:68px;
+    line-height:1.12;
+    font-weight:500;
+    margin:0 0 28px
+}
+.hero p{
+    max-width:650px;
+    margin:0 0 34px;
+    color:#f2f2f2
+}
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:66px;
+    padding:0 34px;
+    border-radius:16px;
+    font-weight:800;
+    border:0;
+    cursor:pointer;
+    transition:.25s
+}
+.btn:hover{
+    transform:translateY(-3px)
+}
+.btn--yellow{
+    background:var(--yellow);
+    color:#111
+}
+.btn--purple{
+    background:var(--purple);
+    color:white
+}
+.section{
+    padding:80px 0
+}
+.section h2,.benefits h2{
+    font-size:46px;
+    line-height:1.15;
+    font-weight:900;
+    margin:0 0 46px
+}
+.section__lead{
+    margin-top:-24px;
+    margin-bottom:45px
+}
+.about__grid{
+    display:grid;
+    grid-template-columns:1fr 1.15fr;
+    gap:70px;
+    align-items:start
+}
+.about__text p{
+    margin:0 0 70px
+}
+.about__photos{
+    display:grid;
+    grid-template-columns:1.35fr .9fr;
+    gap:52px;
+    align-items:center
+}
+.photo{
+    border-radius:0 18px 18px 0;
+    border-right:10px solid #9c9419
+}
+.photo--large{
+    height:520px
+}
+.photo--small{
+    height:340px
+}
+.about__bottom{
+    display:grid;
+    grid-template-columns:1fr 1.15fr;
+    gap:70px;
+    align-items:center;
+    margin-top:50px
+}
+.about__bottom .photo{
+    height:360px
+}
+.about__bottom p{
+    margin:0 0 45px
+}
+.rooms__grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:44px
+}
+.room-card,.game-card{
+    background:white;
+    border-radius:var(--radius);
+    padding:44px
+}
+.room-card h3{
+    font-size:30px;
+    line-height:1.2;
+    margin:0 0 24px;
+    font-weight:900
+}
+.room-card:nth-child(1) h3{
+    color:var(--purple)
+}
+.room-card p{
+    margin:0 0 30px
+}
+.room-card__gallery{
+    display:grid;
+    grid-template-columns:.85fr 1.35fr;
+    gap:26px
+}
+.room-card__gallery img{
+    height:170px;
+    border-radius:12px
+}
+.room-card__gallery img:nth-child(3){
+    grid-column:1/3;
+    width:100%;
+    height:230px
+}
+.center{
+    text-align:center;
+    margin-top:54px
+}
+.benefits{
+    padding:80px 0 45px
+}
+.benefits__inner{
+    min-height:310px;
+    border-radius:22px;
+    background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url('https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+    color:white;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:60px
+}
+.benefits h2{
+    margin-bottom:22px
+}
+.benefits p{
+    max-width:760px;
+    margin:0;
+    color:#f5f5f5
+}
+.games__grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:48px
+}
+.game-card{
+    padding:30px;
+    border-radius:22px
+}
+.game-card img{
+    height:210px;
+    border-radius:12px;
+    margin-bottom:24px;
+    width:100%
+}
+.game-card h3{
+    font-size:22px;
+    margin:0 0 14px;
+    font-weight:900
+}
+.game-card p{
+    margin:0;
+    font-size:17px
+}
+.contact{
+    padding:70px 0 135px
+}
+.contact__box{
+    min-height:640px;
+    border-radius:22px;
+    background:url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+    display:flex;
+    align-items:stretch;
+    overflow:hidden;
+    border-right:8px solid #a19918
+}
+.contact__form{
+    width:50%;
+    padding:70px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(10px);
+    border-radius:0 22px 22px 0
+}
+.contact__form h2{
+    color:white;
+    font-size:42px;
+    line-height:1.1;
+    margin:0 0 34px;
+    font-weight:900
+}
+.contact__form input,.contact__form textarea{
+    width:100%;
+    border:0;
+    border-radius:16px;
+    background:rgba(255,255,255,.24);
+    color:white;
+    padding:22px 26px;
+    font:inherit;
+    margin-bottom:22px;
+    outline:none
+}
+.contact__form input::placeholder,.contact__form textarea::placeholder{
+    color:#ddd
+}
+.contact__form textarea{
+    min-height:150px;
+    resize:vertical
+}
+.footer {
+  background: #161616;
+  color: #fff;
+  padding: 42px 0 32px;
+}
+
+.footer__inner {
+  min-height: 260px;
+  display: grid;
+  grid-template-columns: 620px 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 120px;
+  align-items: start;
+}
+
+.footer__info {
+  grid-row: 1 / 3;
+}
+
+.footer__logo {
+  font-size: 24px;
+  margin-bottom: 34px;
+}
+
+.footer p {
+  max-width: 620px;
+  color: #d7d7d7;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 46px;
+  font-size: 16px;
+}
+
+.age {
+  justify-self: end;
+  align-self: end;
+  font-weight: 700;
+}
+.age:before{
+    content:'18+';
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;
+    height:34px;
+    border:3px solid #ee3b46;
+    border-radius:50%;
+    margin-right:12px
+}
+@media (max-width:1100px){
+    .games__grid{
+        grid-template-columns:repeat(2,1fr)
+    }
+    .about__grid,.about__bottom,.rooms__grid{
+        grid-template-columns:1fr
+    }
+    .contact__form{
+        width:70%
+    }
+    .hero h1{
+        font-size:54px
+    }
+}
+@media (max-width:760px){
+    body{
+        font-size:16px
+    }
+    .container{
+        width:min(100% - 28px, var(--container))
+    }
+    .header__inner{
+        height:68px
+    }
+    .logo{
+        font-size:25px
+    }
+    .burger{
+        display:block
+    }
+    .nav{
+        position:absolute;
+        top:68px;
+        left:14px;
+        right:14px;
+        display:none;
+        flex-direction:column;
+        background:#111;
+        border-radius:16px;
+        padding:22px;
+        gap:18px
+    }
+    .nav.is-open{
+        display:flex
+    }
+    .hero{
+        min-height:720px
+    }
+    .hero h1{
+        font-size:43px
+    }
+    .hero p{
+        font-size:16px
+    }
+    .section{
+        padding:54px 0
+    }
+    .section h2,.benefits h2{
+        font-size:34px
+    }
+    .about__photos{
+        grid-template-columns:1fr;
+        gap:22px
+    }
+    .photo,.photo--large,.photo--small{
+        height:300px;
+        border-right:6px solid #9c9419
+    }
+    .room-card,.game-card{
+        padding:24px
+    }
+    .room-card__gallery{
+        grid-template-columns:1fr
+    }
+    .room-card__gallery img,.room-card__gallery img:nth-child(3){
+        grid-column:auto;
+        height:190px
+    }
+    .games__grid{
+        grid-template-columns:1fr
+    }
+    .benefits__inner{
+        padding:38px 20px
+    }
+    .contact{
+        padding-bottom:70px
+    }
+    .contact__box{
+        min-height:auto
+    }
+    .contact__form{
+        width:100%;
+        padding:34px 22px
+    }
+    .contact__form h2{
+        font-size:32px
+    }
+    .footer__inner{
+        grid-template-columns:1fr
+    }
+    .footer__nav{
+        justify-content:flex-start;
+        flex-wrap:wrap
+    }
+    .age{
+        align-self:start
+    }
+}
+ 
